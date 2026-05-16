@@ -21,5 +21,6 @@ namespace ApiKalumManagement.Entities
         public Schedule Schedule {get;set;}
         public TechnicalCareer TechnicalCareer {get;set;}
         public List<AdmissionExamResult> AdmissionExamResults {get;set;}
+        public List<EnrollmentPayment> EnrollmentPayments {get;set;}
     }
 }
