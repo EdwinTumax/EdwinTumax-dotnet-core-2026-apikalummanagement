@@ -23,7 +23,7 @@ namespace ApiKalumManagement.Controllers
         [HttpGet]
         public async Task<ActionResult<Applicant>> Get()
         {
-            List<Applicant> applicants = await this._kalumDBContext.Applicants.Include(a => a.AdmissionExam).Include(a => a.Schedule).Include(a => a.TechnicalCareer).ToListAsync();
+            List<Applicant> applicants = await this._kalumDBContext.Applicants.Include(a => a.AdmissionExam).Include(a => a.Schedule).Include(a => a.TechnicalCareer).Include(a => a.AdmissionExamResults).ToListAsync();
             return Ok(applicants);
         }
     }

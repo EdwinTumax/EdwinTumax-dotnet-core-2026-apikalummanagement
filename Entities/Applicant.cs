@@ -16,9 +16,10 @@ namespace ApiKalumManagement.Entities
         public string Status {get;set;}
         public string ExamId {get;set;}
         public string ScheduleId {get;set;}
-        public string CareerId {get;set;}
+        public string CareerId {get;set;}        
         public AdmissionExam AdmissionExam {get;set;}
         public Schedule Schedule {get;set;}
         public TechnicalCareer TechnicalCareer {get;set;}
+        public List<AdmissionExamResult> AdmissionExamResults {get;set;}
     }
 }
