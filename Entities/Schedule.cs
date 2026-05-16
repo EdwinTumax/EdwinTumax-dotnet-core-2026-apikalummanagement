@@ -11,5 +11,6 @@ namespace ApiKalumManagement.Entities
         public string Prefix {get;set;}
         public string Description {get;set;}
         public List<Applicant> Applicants {get;set;}
+        public List<Enrollment> Enrollments {get;set;}
     }
 }

@@ -9,6 +9,7 @@ namespace ApiKalumManagement.Entities
     {
         public string CareerId {get;set;}
         public string Name {get;set;}
-        public List<Applicant> applicants {get;set;}
+        public List<Applicant> Applicants {get;set;}
+        public List<Enrollment> Enrollments {get;set;}
     }
 }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ApiKalumManagement")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fa144c638c7d68cf9064140f9628695ac417974c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0e7439ffd4cfcbba031c99c291b689bc734520e2")]
 [assembly: System.Reflection.AssemblyProductAttribute("ApiKalumManagement")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ApiKalumManagement")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
