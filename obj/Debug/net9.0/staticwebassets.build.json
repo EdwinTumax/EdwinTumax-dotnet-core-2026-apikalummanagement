@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "dB0V/p2wQjEC8W3DKauXbwXRnuHEdsJJkZ9r/xDZ3jA=",
+  "Source": "ApiKalumManagement",
+  "BasePath": "_content/ApiKalumManagement",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

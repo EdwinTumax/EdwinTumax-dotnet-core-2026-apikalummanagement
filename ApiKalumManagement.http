@@ -1,0 +1,6 @@
+@ApiKalumManagement_HostAddress = http://localhost:5166
+
+GET {{ApiKalumManagement_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
