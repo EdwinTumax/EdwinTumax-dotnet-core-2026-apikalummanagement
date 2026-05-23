@@ -10,20 +10,19 @@ using Microsoft.EntityFrameworkCore;
 namespace ApiKalumManagement.Controllers
 {
     [ApiController]
-    [Route("kalum-management/v1/student")]
-    public class StudentController : ControllerBase
+    [Route("kalum-management/v1/career-investment")]
+    public class CareerInvestmentController : ControllerBase
     {
         private readonly KalumDBContext _kalumDBContext;
-
-        public StudentController(KalumDBContext kalumDBContext)
+        public CareerInvestmentController(KalumDBContext kalumDBContext)
         {
             this._kalumDBContext = kalumDBContext;
         }
 
-        public async Task<ActionResult<Student>> Get()
+        public async Task<ActionResult<CareerInvestment>> Get()
         {
-            List<Student> students = await this._kalumDBContext.Students.Include(s => s.Enrollments).Include(s => s.AccountsReceivables).ToListAsync();
-            return Ok(students);
+            List<CareerInvestment> careerInvestments = await this._kalumDBContext.CareerInvestments.Include(ci => ci.TechnicalCareer).ToListAsync();
+            return Ok(careerInvestments);
         }
     }
 }

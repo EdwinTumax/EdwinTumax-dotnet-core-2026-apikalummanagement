@@ -17,6 +17,9 @@ namespace ApiKalumManagement.DBContexts
         public DbSet<EnrollmentPayment> EnrollmentPayments {set;get;}
         public DbSet<Student> Students {get;set;}
         public DbSet<Enrollment> Enrollments {get;set;}
+        public DbSet<Charge> Charges {set;get;}
+        public DbSet<AccountsReceivable> AccountsReceivables {get;set;}
+        public DbSet<CareerInvestment> CareerInvestments {get;set;}
         public KalumDBContext(DbContextOptions options) : base(options)
         {
             
@@ -33,7 +36,9 @@ namespace ApiKalumManagement.DBContexts
             modelBuilder.Entity<EnrollmentPayment>().ToTable("EnrollmentPayment").HasKey(ep => ep.PaymentReceipt);
             modelBuilder.Entity<Student>().ToTable("Student").HasKey(s => s.StudentId);
             modelBuilder.Entity<Enrollment>().ToTable("Enrollment").HasKey(e => e.EnrollmentId);
-
+            modelBuilder.Entity<Charge>().ToTable("Charge").HasKey(c => c.ChargeId);
+            modelBuilder.Entity<AccountsReceivable>().ToTable("AccountsReceivable").HasKey(ar => new {ar.ChargeName, ar.Year, ar.StudentId});
+            modelBuilder.Entity<CareerInvestment>().ToTable("CareerInvestment").HasKey(ci => ci.InvestmentId);
 
             modelBuilder.Entity<Applicant>().HasOne<AdmissionExam>(a => a.AdmissionExam).WithMany(ea => ea.Applicants).HasForeignKey(a => a.ExamId);
             modelBuilder.Entity<Applicant>().HasOne<Schedule>(a => a.Schedule).WithMany(s => s.Applicants).HasForeignKey(a => a.ScheduleId);
@@ -43,6 +48,9 @@ namespace ApiKalumManagement.DBContexts
             modelBuilder.Entity<Enrollment>().HasOne<TechnicalCareer>(e => e.TechnicalCareer).WithMany(tc => tc.Enrollments).HasForeignKey(e => e.CareerId);
             modelBuilder.Entity<Enrollment>().HasOne<Schedule>(e => e.Schedule).WithMany(s => s.Enrollments).HasForeignKey(e => e.ScheduleId);
             modelBuilder.Entity<Enrollment>().HasOne<Student>(e => e.Student).WithMany(e => e.Enrollments).HasForeignKey(e => e.StudentId);
+            modelBuilder.Entity<AccountsReceivable>().HasOne<Charge>(ar => ar.Charge).WithMany(c => c.AccountsReceivables).HasForeignKey(ar => ar.ChargeId);
+            modelBuilder.Entity<AccountsReceivable>().HasOne<Student>(ar => ar.Student).WithMany(s => s.AccountsReceivables).HasForeignKey(ar => ar.StudentId);
+            modelBuilder.Entity<CareerInvestment>().HasOne<TechnicalCareer>(ci => ci.TechnicalCareer).WithMany(tc => tc.CareerInvestments).HasForeignKey(ci => ci.CareerId);
 
         }
 
