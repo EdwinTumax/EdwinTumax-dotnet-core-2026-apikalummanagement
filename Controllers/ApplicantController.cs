@@ -31,5 +31,17 @@ namespace ApiKalumManagement.Controllers
                 .Include(a => a.EnrollmentPayments).ToListAsync();
             return Ok(applicants);
         }
+        
+        [HttpGet("{fileNumber}")]
+        public async Task<ActionResult<Applicant>> GetById(string fileNumber)
+        {
+            Applicant applicant = await this._kalumDBContext.Applicants.FirstOrDefaultAsync(a => a.FileNumber == fileNumber);          
+            if(applicant == null)
+            {
+                return BadRequest();
+            } 
+            return Ok(applicant);
+        }
+
     }
 }
