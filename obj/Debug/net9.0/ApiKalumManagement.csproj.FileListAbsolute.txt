@@ -164,3 +164,5 @@
 /Users/edwinrolandotumax/Documents/2026/net/backend/prod/ApiKalumManagement/bin/Debug/net9.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
 /Users/edwinrolandotumax/Documents/2026/net/backend/prod/ApiKalumManagement/bin/Debug/net9.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
 /Users/edwinrolandotumax/Documents/2026/net/backend/prod/ApiKalumManagement/obj/Debug/net9.0/ApiKalumManagement.sourcelink.json
+/Users/edwinrolandotumax/Documents/2026/net/backend/prod/ApiKalumManagement/bin/Debug/net9.0/AutoMapper.dll
+/Users/edwinrolandotumax/Documents/2026/net/backend/prod/ApiKalumManagement/bin/Debug/net9.0/RabbitMQ.Client.dll
